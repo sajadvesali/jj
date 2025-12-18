@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<link rel="stylesheet" href="https://example.com/css/main.css">
+    <meta charset="UTF-8">
+    <title>🔥 برنامه امن سجادستر 🔥</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: #0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            background: #0f0;
+            color: #000;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔥 برنامه HTML آماده اجرا 😎</h1>
+    <p>ساخته شده توسط استاد شیفو برای سجادستر 🤜🤛</p>
+
+    <button onclick="startTimer()">شروع زمان!</button>
+
+    <h2 id="timer"></h2>
+
+    <script>
+        function startTimer() {
+            let time = 30;
+            let x = setInterval(() => {
+                document.getElementById("timer").innerText = time + " ثانیه باقی مانده...";
+                time--;
+
+                if (time < 0) {
+                    clearInterval(x);
+                    document.getElementById("timer").innerText = "😂 شوخی بود رفیق!";
+                    setTimeout(() => {
+                        document.body.innerHTML = "<h1 style='color:red;'>💥 برنامه نابود شد 💥</h1>";
+                    }, 10000);
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
